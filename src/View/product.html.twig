@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Dans mon groupe de musique j'ai : </h2>
+  
+    {% for product in products|slice(0, 3) %}
+    {{product}}
+    {% endfor %}
+
+
+    <h2> et puis :</h2>
+
+
+    {% for product in products|slice(3, 6) %}
+    {{product}}
+    {% endfor %}
+
+
+
+    <h2>Les voiçi avec un "var-dump" :</h2>
+    {{dump(products)}}
+    
+ 
+     <h2> MERCI TWIG</h2>
+
+
+
+</body>
+
+</html>
